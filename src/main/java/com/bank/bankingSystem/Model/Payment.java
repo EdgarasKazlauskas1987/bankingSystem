@@ -6,6 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Positive;
 
 @Entity //maybe remove this?
 public abstract class Payment {
@@ -15,6 +17,7 @@ public abstract class Payment {
     private long id;
 
     @NotNull(message = "Please enter 'amount'")
+    @Positive(message = "Please enter positive amount")
     private double amount;
 
     @NotBlank(message = "Please enter 'currency'")
