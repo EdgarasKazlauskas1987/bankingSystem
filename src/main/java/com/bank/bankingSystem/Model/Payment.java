@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Positive;
 
-@Entity //maybe remove this?
+@Entity
 public abstract class Payment {
 
     @Id
@@ -21,6 +21,7 @@ public abstract class Payment {
     private double amount;
 
     @NotBlank(message = "Please enter 'currency'")
+    @Pattern(regexp = "EUR|USD")
     private String currency;
 
     @NotBlank(message = "Please enter 'Debtor IBAN'")
@@ -28,6 +29,18 @@ public abstract class Payment {
 
     @NotBlank(message = "Please enter 'Creditor IBAN'")
     private String creditorIban;
+
+    private String status = "Active";
+
+    private String type;
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public long getId() {
+        return id;
+    }
 
     public double getAmount() {
         return amount;
@@ -61,12 +74,20 @@ public abstract class Payment {
         this.creditorIban = creditorIban;
     }
 
-        /*
-    @NotBlank(message = "Currency is mandatory")
-    enum Currency {
-        EUR,
-        USD
+    public String getStatus() {
+        return status;
     }
-    */
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 }
 

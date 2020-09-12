@@ -2,10 +2,9 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Payments</title>
 </head>
 <body>
-
 <div th:switch="${payments}">
     <h2 th:case="null">There are no payments made yet!</h2>
     <div th:case="*">
@@ -13,25 +12,20 @@
         <table>
             <thead>
             <tr>
-                <th>Id</th>>
                 <th>Amount</th>
                 <th>Currency</th>
+                <th>Status</th>th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="payment : ${payments}">
-                <td th:text="${payment.id}"></td>
                 <td th:text="${payment.amount}"></td>
                 <td th:text="${payment.currency}"></td>
+                <td th:text="${payment.status}"></td>
             </tr>
             </tbody>
         </table>
     </div>
-    <h2>Start a new payment</h2>
-    <p><a href="/addtype1payment">Make new Type1 payment</a></p>
-    <p><a href="/addtype2payment">Make new Type2 payment</a></p>
-    <p><a href="/addtype3payment">Make new Type3 payment</a></p>
-    <p><a href="/payments">Find your payments</a></p>
 </div>
 </body>
 </html>

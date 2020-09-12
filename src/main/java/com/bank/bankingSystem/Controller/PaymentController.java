@@ -1,5 +1,6 @@
 package com.bank.bankingSystem.Controller;
 
+import com.bank.bankingSystem.Model.Payment;
 import com.bank.bankingSystem.Model.Type1Payment;
 import com.bank.bankingSystem.Model.Type2Payment;
 import com.bank.bankingSystem.Model.Type3Payment;
@@ -10,7 +11,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 
 import javax.validation.Valid;
 
@@ -31,6 +34,12 @@ public class PaymentController {
         IPhandler.publishClientsCountry();
         return "index";
     }
+
+   @GetMapping("/payments")
+   public String getPayments(Model model) {
+        model.addAttribute("payments", paymentRepository.findAll());
+        return "payments";
+   }
 
     @GetMapping("/addtype1payment")
     public String addType1Payment(Type1Payment type1Payment) {
@@ -80,17 +89,24 @@ public class PaymentController {
         return "index";
     }
 
-    @GetMapping("/addpayment")
-    public String showSignUpForm(Type1Payment type1Payment) {
-        return "add-payment";
+    @GetMapping("/cancel/{id}")
+    public String showCancelationForm(@PathVariable("id") long id, Model model) {
+        Payment payment = paymentRepository.findById(id);
+
+        model.addAttribute("payment", payment);
+        return "cancel-payment";
     }
 
-    @PostMapping("/addpayment")
-    public String addPayment(@Valid Type1Payment type1Payment, BindingResult result, Model model) {
-        if (result.hasErrors()) {
-            return "add-payment";
-        }
+    @PostMapping("/cancel/{id}")
+    public String cancelPayment(@PathVariable("id") long id, @Valid Payment payment,
+                                BindingResult result, Model model) {
 
+        if (result.hasErrors()) {
+            payment.setId(id);
+            return "cancel-payment";
+        }
+        // make payment object according to its type
+        Type1Payment type1Payment = (Type1Payment) payment;
         paymentRepository.save(type1Payment);
         model.addAttribute("payments", paymentRepository.findAll());
         return "index";
