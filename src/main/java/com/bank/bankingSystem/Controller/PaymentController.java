@@ -4,6 +4,7 @@ import com.bank.bankingSystem.Model.Type1Payment;
 import com.bank.bankingSystem.Model.Type2Payment;
 import com.bank.bankingSystem.Model.Type3Payment;
 import com.bank.bankingSystem.Repository.PaymentRepository;
+import com.bank.bankingSystem.Utilities.IPhandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,6 +28,7 @@ public class PaymentController {
 
     @GetMapping("/index")
     public String showIndex() {
+        IPhandler.publishClientsCountry();
         return "index";
     }
 
@@ -78,7 +80,6 @@ public class PaymentController {
         return "index";
     }
 
-
     @GetMapping("/addpayment")
     public String showSignUpForm(Type1Payment type1Payment) {
         return "add-payment";
@@ -94,7 +95,4 @@ public class PaymentController {
         model.addAttribute("payments", paymentRepository.findAll());
         return "index";
     }
-
-
-
 }
