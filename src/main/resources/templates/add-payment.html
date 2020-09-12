@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/addpayment}" th:object="${type1Payment}" method="post">
+    <label for="amount">Amount</label>
+    <input type="text" th:field="*{amount}" id="amount" placeholder="Amount">
+    <span th:if="${#fields.hasErrors('amount')}" th:errors="*{amount}"></span>
+    <label for="details">Details</label>
+    <input type="text" th:field="*{details}" id="details" placeholder="Details">
+    <span th:if="${#fields.hasErrors('details')}" th:errors="*{details}"></span>
+    <input type="submit" value="Add Payment">
+</form>
+</body>
+</html>

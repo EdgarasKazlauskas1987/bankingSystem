@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Type1 Payment</title>
+</head>
+<body>
+<form action="#" th:action="@{/addtype1payment}" th:object="${type1Payment}" method="post">
+    <label for="amount">Amount</label>
+    <input type="text" th:field="*{amount}" id="amount" placeholder="Amount">
+    <span th:if="${#fields.hasErrors('amount')}" th:errors="*{amount}"></span>
+    <label for="currency">Currency</label>
+    <input type="text" th:field="*{currency}" id="currency" placeholder="Currency">
+    <span th:if="${#fields.hasErrors('currency')}" th:errors="*{currency}"></span>
+    <label for="debtorIban">Debtor IBAN</label>
+    <input type="text" th:field="*{debtorIban}" id="debtorIban" placeholder="Debtor IBAN">
+    <span th:if="${#fields.hasErrors('debtorIban')}" th:errors="*{debtorIban}"></span>
+    <label for="creditorIban">Creditor IBAN</label>
+    <input type="text" th:field="*{creditorIban}" id="creditorIban" placeholder="Creditor IBAN">
+    <span th:if="${#fields.hasErrors('creditorIban')}" th:errors="*{creditorIban}"></span>
+    <label for="details">Details</label>
+    <input type="text" th:field="*{details}" id="details" placeholder="Details">
+    <span th:if="${#fields.hasErrors('details')}" th:errors="*{details}"></span>
+    <input type="submit" value="Add Payment">
+</form>
+</body>
+</html>
