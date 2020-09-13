@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 
 @Entity
-public class Type3Payment extends  Payment{
+public class Type3Payment extends  Payment {
 
     @NotBlank(message = "Please enter 'Bank BIC code'")
     private String bankBicCode;

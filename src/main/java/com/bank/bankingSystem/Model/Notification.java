@@ -13,10 +13,10 @@ public class Notification {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @NotNull(message = "Missing 'paymentId'")
+    @NotNull
     private long paymentId;
 
-    @NotNull(message = "Missing 'notified'")
+    @NotNull
     private boolean notified;
 
     public long getId() {

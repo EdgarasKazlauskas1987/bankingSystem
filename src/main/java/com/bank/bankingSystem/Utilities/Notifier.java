@@ -8,8 +8,6 @@ import java.util.regex.Pattern;
 
 public class Notifier {
 
-    private static HttpURLConnection connection;
-
     private static boolean isSuccessfulResponse(String responseCode) {
         Pattern pattern = Pattern.compile("^2\\d{2}$");
         Matcher matcher = pattern.matcher(responseCode);
@@ -20,7 +18,7 @@ public class Notifier {
     public static boolean notifyExternalService(String urlAddress) throws IOException {
 
         URL url = new URL(urlAddress);
-        connection = (HttpURLConnection) url.openConnection();
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
         connection.connect();
 

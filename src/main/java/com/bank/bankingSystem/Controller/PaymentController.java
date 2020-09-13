@@ -120,30 +120,6 @@ public class PaymentController {
         return INDEX_PAGE;
     }
 
-    @GetMapping("/cancel/{id}")
-    public String showCancelationForm(@PathVariable("id") long id, Model model) {
-        Payment payment = paymentRepository.findById(id);
-
-        model.addAttribute("payment", payment);
-        return CANCEL_PAYMENT_PAGE;
-    }
-
-    @PostMapping("/cancel/{id}")
-    public String cancelPayment(@PathVariable("id") long id, @Valid Payment payment,
-                                BindingResult result, Model model) {
-
-        if (result.hasErrors()) {
-            payment.setId(id);
-            return CANCEL_PAYMENT_PAGE;
-        }
-        // make payment object according to its type
-        Type1Payment type1Payment = (Type1Payment) payment;
-        type1Payment.setStatus("Canceled");
-        paymentRepository.save(type1Payment);
-        model.addAttribute("payments", paymentRepository.findAll());
-        return INDEX_PAGE;
-    }
-
     private void saveNotification(Payment payment, boolean notified) {
         Notification notification = new Notification();
         notification.setPaymentId(payment.getId());

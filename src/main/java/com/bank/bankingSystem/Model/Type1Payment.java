@@ -26,6 +26,4 @@ public class Type1Payment extends Payment {
     public void setDetails(String details) {
         this.details = details;
     }
-
-    // Create constructor
 }
