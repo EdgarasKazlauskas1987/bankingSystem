@@ -26,7 +26,6 @@ public class PaymentController {
     private final String ADD_TYPE3_PAYMENT_PAGE = "add-type3-payment";
     private final String PAYMENT_PAGE = "payment";
     private final String PAYMENTS_PAGE = "payments";
-    private final String CANCEL_PAYMENT_PAGE = "cancel-payment";
 
     private final PaymentRepository paymentRepository;
     private final NotificationRepository notificationRepository;

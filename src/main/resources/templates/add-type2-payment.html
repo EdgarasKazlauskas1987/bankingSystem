@@ -9,18 +9,24 @@
     <label for="amount">Amount</label>
     <input type="text" th:field="*{amount}" id="amount" placeholder="Amount">
     <span th:if="${#fields.hasErrors('amount')}" th:errors="*{amount}"></span>
+    <br/>
+    <label for="currency">Currency</label>
     <select th:field="*{currency}">
         <option th:value="'USD'" th:text="USD"></option>
     </select>
+    <br/>
     <label for="debtorIban">Debtor IBAN</label>
     <input type="text" th:field="*{debtorIban}" id="debtorIban" placeholder="Debtor IBAN">
     <span th:if="${#fields.hasErrors('debtorIban')}" th:errors="*{debtorIban}"></span>
+    <br/>
     <label for="creditorIban">Creditor IBAN</label>
     <input type="text" th:field="*{creditorIban}" id="creditorIban" placeholder="Creditor IBAN">
     <span th:if="${#fields.hasErrors('creditorIban')}" th:errors="*{creditorIban}"></span>
+    <br/>
     <label for="details">Details</label>
     <input type="text" th:field="*{details}" id="details" placeholder="Details">
     <span th:if="${#fields.hasErrors('details')}" th:errors="*{details}"></span>
+    <br/>
     <input type="submit" value="Add Payment">
 </form>
 </body>
