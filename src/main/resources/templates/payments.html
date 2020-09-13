@@ -12,16 +12,12 @@
         <table>
             <thead>
             <tr>
-                <th>Amount</th>
-                <th>Currency</th>
-                <th>Status</th>th>
+                <th>Payment Id</th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="payment : ${payments}">
-                <td th:text="${payment.amount}"></td>
-                <td th:text="${payment.currency}"></td>
-                <td th:text="${payment.status}"></td>
+                <td th:text="${payment.id}"></td>
             </tr>
             </tbody>
         </table>

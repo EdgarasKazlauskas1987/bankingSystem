@@ -1,12 +1,19 @@
 package com.bank.bankingSystem.Repository;
 
 import com.bank.bankingSystem.Model.Payment;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
 public interface PaymentRepository extends CrudRepository<Payment, Long> {
 
-    List<Payment> findByAmount(double amount);
+    @Query(value = "SELECT * FROM Payment WHERE status = 'Active'", nativeQuery = true)
+    List<Payment> findAll();
+
+    @Query(value = "SELECT * FROM Payment WHERE id = ?1 AND status = 'Active'", nativeQuery = true)
     Payment findById(long id);
+
+    @Query(value = "SELECT * FROM Payment WHERE amount = ?1 AND status = 'Active'", nativeQuery = true)
+    List<Payment> findByAmount(double amount);
 }

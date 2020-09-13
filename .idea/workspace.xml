@@ -3,15 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a0339a9e-8657-481f-9341-0f7259221605" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/bankingSystem/BankOfEdgarasApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/bankingSystem/BankOfEdgarasApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/bankingSystem/Controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/bankingSystem/Controller/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/bankingSystem/Model/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/bankingSystem/Model/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/bankingSystem/Model/Type1Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/bankingSystem/Model/Type1Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/bankingSystem/Model/Type2Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/bankingSystem/Model/Type2Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/bankingSystem/Model/Type3Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/bankingSystem/Model/Type3Payment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/bankingSystem/Repository/PaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/bankingSystem/Repository/PaymentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add-payment.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cancel-payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cancel-payment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/payments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/payments.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,45 +91,45 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1875" height="338" key="GridCell.Tab.0.bottom" timestamp="1599929408548">
+    <state width="1875" height="273" key="GridCell.Tab.0.bottom" timestamp="1599992438135">
       <screen x="1366" y="-100" width="1920" height="1040" />
     </state>
-    <state width="1875" height="338" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-100.1920.1040@1366.-100.1920.1040" timestamp="1599929408548" />
-    <state width="1875" height="338" key="GridCell.Tab.0.center" timestamp="1599929408548">
+    <state width="1875" height="273" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-100.1920.1040@1366.-100.1920.1040" timestamp="1599992438135" />
+    <state width="1875" height="273" key="GridCell.Tab.0.center" timestamp="1599992438135">
       <screen x="1366" y="-100" width="1920" height="1040" />
     </state>
-    <state width="1875" height="338" key="GridCell.Tab.0.center/0.0.1366.728/1366.-100.1920.1040@1366.-100.1920.1040" timestamp="1599929408548" />
-    <state width="1875" height="338" key="GridCell.Tab.0.left" timestamp="1599929408548">
+    <state width="1875" height="273" key="GridCell.Tab.0.center/0.0.1366.728/1366.-100.1920.1040@1366.-100.1920.1040" timestamp="1599992438135" />
+    <state width="1875" height="273" key="GridCell.Tab.0.left" timestamp="1599992438134">
       <screen x="1366" y="-100" width="1920" height="1040" />
     </state>
-    <state width="1875" height="338" key="GridCell.Tab.0.left/0.0.1366.728/1366.-100.1920.1040@1366.-100.1920.1040" timestamp="1599929408548" />
-    <state width="1875" height="338" key="GridCell.Tab.0.right" timestamp="1599929408548">
+    <state width="1875" height="273" key="GridCell.Tab.0.left/0.0.1366.728/1366.-100.1920.1040@1366.-100.1920.1040" timestamp="1599992438134" />
+    <state width="1875" height="273" key="GridCell.Tab.0.right" timestamp="1599992438135">
       <screen x="1366" y="-100" width="1920" height="1040" />
     </state>
-    <state width="1875" height="338" key="GridCell.Tab.0.right/0.0.1366.728/1366.-100.1920.1040@1366.-100.1920.1040" timestamp="1599929408548" />
-    <state width="1875" height="338" key="GridCell.Tab.1.bottom" timestamp="1599929408549">
+    <state width="1875" height="273" key="GridCell.Tab.0.right/0.0.1366.728/1366.-100.1920.1040@1366.-100.1920.1040" timestamp="1599992438135" />
+    <state width="1875" height="338" key="GridCell.Tab.1.bottom" timestamp="1599929543479">
       <screen x="1366" y="-100" width="1920" height="1040" />
     </state>
-    <state width="1875" height="338" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.-100.1920.1040@1366.-100.1920.1040" timestamp="1599929408549" />
-    <state width="1875" height="338" key="GridCell.Tab.1.center" timestamp="1599929408549">
+    <state width="1875" height="338" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.-100.1920.1040@1366.-100.1920.1040" timestamp="1599929543479" />
+    <state width="1875" height="338" key="GridCell.Tab.1.center" timestamp="1599929543479">
       <screen x="1366" y="-100" width="1920" height="1040" />
     </state>
-    <state width="1875" height="338" key="GridCell.Tab.1.center/0.0.1366.728/1366.-100.1920.1040@1366.-100.1920.1040" timestamp="1599929408548" />
-    <state width="1875" height="338" key="GridCell.Tab.1.left" timestamp="1599929408548">
+    <state width="1875" height="338" key="GridCell.Tab.1.center/0.0.1366.728/1366.-100.1920.1040@1366.-100.1920.1040" timestamp="1599929543479" />
+    <state width="1875" height="338" key="GridCell.Tab.1.left" timestamp="1599929543479">
       <screen x="1366" y="-100" width="1920" height="1040" />
     </state>
-    <state width="1875" height="338" key="GridCell.Tab.1.left/0.0.1366.728/1366.-100.1920.1040@1366.-100.1920.1040" timestamp="1599929408548" />
-    <state width="1875" height="338" key="GridCell.Tab.1.right" timestamp="1599929408549">
+    <state width="1875" height="338" key="GridCell.Tab.1.left/0.0.1366.728/1366.-100.1920.1040@1366.-100.1920.1040" timestamp="1599929543479" />
+    <state width="1875" height="338" key="GridCell.Tab.1.right" timestamp="1599929543479">
       <screen x="1366" y="-100" width="1920" height="1040" />
     </state>
-    <state width="1875" height="338" key="GridCell.Tab.1.right/0.0.1366.728/1366.-100.1920.1040@1366.-100.1920.1040" timestamp="1599929408549" />
+    <state width="1875" height="338" key="GridCell.Tab.1.right/0.0.1366.728/1366.-100.1920.1040@1366.-100.1920.1040" timestamp="1599929543479" />
     <state x="1855" y="73" key="Maven.ArtifactSearchDialog" timestamp="1599903134571">
       <screen x="1366" y="-100" width="1920" height="1040" />
     </state>
     <state x="1855" y="73" key="Maven.ArtifactSearchDialog/0.0.1366.728/1366.-100.1920.1040@1366.-100.1920.1040" timestamp="1599903134571" />
-    <state x="2020" y="242" key="com.intellij.ide.util.TipDialog" timestamp="1599917990570">
+    <state x="2020" y="242" key="com.intellij.ide.util.TipDialog" timestamp="1599986999406">
       <screen x="1366" y="-100" width="1920" height="1040" />
     </state>
-    <state x="2020" y="242" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.-100.1920.1040@1366.-100.1920.1040" timestamp="1599917990570" />
+    <state x="2020" y="242" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.-100.1920.1040@1366.-100.1920.1040" timestamp="1599986999406" />
   </component>
 </project>

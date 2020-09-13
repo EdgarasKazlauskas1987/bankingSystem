@@ -10,7 +10,7 @@
       th:object="${payment}"
       method="post">
     <label for="status">Status</label>
-    <input type="text" th:field="*{status}" id="status" value="canceled">
+    <input type="text" th:field="*{status}" id="status">
     <span th:if="${#fields.hasErrors('status')}" th:errors="*{status}"></span>
     <input type="submit" value="Cancel payment">
 </form>

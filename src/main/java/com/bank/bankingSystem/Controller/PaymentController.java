@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 
 import javax.validation.Valid;
+import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class PaymentController {
@@ -36,8 +38,23 @@ public class PaymentController {
     }
 
    @GetMapping("/payments")
-   public String getPayments(Model model) {
+   public String getAllPayments(Model model) {
+        //model.addAttribute("payments", paymentRepository.findAll());
         model.addAttribute("payments", paymentRepository.findAll());
+        return "payments";
+   }
+
+   @GetMapping("/payments/{id}")
+   public String getPaymentById(@PathVariable("id") long id, Model model) {
+        Payment payment = paymentRepository.findById(id);
+        model.addAttribute("payment", payment);
+        return "payment";
+   }
+
+   @GetMapping("/payments/amount/{amount}")
+   public String getPaymentByAmount(@PathVariable("amount") double amount, Model model) {
+        List<Payment> payments = paymentRepository.findByAmount(amount);
+        model.addAttribute("payments", payments);
         return "payments";
    }
 
