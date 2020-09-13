@@ -48,6 +48,7 @@ In order to run the project a small amount of prerequisites and additional steps
 + `localhost:8080/addtype2payment` `POST` - Creates `TYPE2` `payment`
 + `localhost:8080/addtype3payment` `GET` - Returns form for making `TYPE3` `payment`
 + `localhost:8080/addtype3payment` `POST` - Creates `TYPE3` `payment`
++ `localhost:8080/notifications` - Lists all `notifications`
 
 Most of these requests can also be made by using the existing pages which can be navigated from `localhost:8080/index`
 
@@ -72,6 +73,8 @@ Notifications page
 Payment by id and by amount looks the same
 
 ![alt text](src/main/resources/img/paymentById.png "Payment By Id Page")
+
+Notifications page
 
 
 ## Database
