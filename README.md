@@ -23,6 +23,7 @@ In order to run the project a small amount of prerequisites and additional steps
 + Java programming language
 + Java Spring Boot framework
 + Thymeleaf framework
++ h2 database
 
 ## What has been implemented:
 
@@ -50,9 +51,39 @@ In order to run the project a small amount of prerequisites and additional steps
 
 Most of these requests can also be made by using the existing pages which can be navigated from `localhost:8080/index`
 
-Existing pages:
+## Existing pages
+
+Index Page
 
 ![alt text](src/main/resources/img/index.png "Index Page")
+
+add-typex-payment page
+
+![alt text](src/main/resources/img/add-type1-payment.png "Add Payment Page")
+
+Payments page
+
+![alt text](src/main/resources/img/payments.png "Payments Page")
+
+Notifications page
+
+![alt text](src/main/resources/img/notifications.png "Notifications Page")
+
+Payment by id and by amount looks the same
+
+![alt text](src/main/resources/img/paymentById.png "Payment By Id Page")
+
+
+## Database
+
+In this project `H2` internal database is used. After the program is closed all the previously saved data is lost.
+
+There are 2 entities saved in the database: `Payment` and `Notification`
+
+`Payment` consists of the properties described in the exarcise and there also exists a difference between the types of payments made.
+`Notification` consists of the following properties: `id` (automatically generated), `paymentId` (Foreign Key from `Payment`), `notified`.
+
+
 
 
 
