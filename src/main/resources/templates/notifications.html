@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Notifications</title>
+</head>
+<body>
+<div th:switch="${notifications}">
+    <h2 th:case="null">There are no notifications yet</h2>
+    <div th:case="*">
+        <h2>Notifications</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Notification Id</th>
+                <th>Payment Id</th>
+                <th>External service notified?</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="notification : ${notifications}">
+                <td th:text="${notification.id}"></td>
+                <td th:text="${notification.paymentId}"></td>
+                <td th:text="${notification.notified}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
